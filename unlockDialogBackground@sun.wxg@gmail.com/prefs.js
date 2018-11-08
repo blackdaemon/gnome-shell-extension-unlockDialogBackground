@@ -127,7 +127,7 @@ class PrefsWidget {
         fileChooser.set_preview_widget(preview_image);
 
         fileChooser.connect('update-preview', (dialog) => {
-        dialog.set_preview_widget_active(false);
+            dialog.set_preview_widget_active(false);
             let file = fileChooser.get_uris();
             if (file.length > 0 && file[0].startsWith("file://")) {
                 file = decodeURIComponent(file[0].substring(7));
